@@ -17,5 +17,9 @@
   "license": "MIT",
   "dependencies": {
     
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
   }
 }

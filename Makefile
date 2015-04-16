@@ -2,7 +2,7 @@ TESTS = $(shell find test -type f -name "*test.js")
 
 
 test:
-	mocha 	$(TESTS)
+	./node_modules/.bin/mocha 	$(TESTS)
 
 .PHONY:  test 
 

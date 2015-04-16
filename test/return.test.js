@@ -1,4 +1,4 @@
-
+var should = require('should');
 var returnData = {
 "ret_code":"0000",
 "ret_msg":"交易成功",
@@ -35,11 +35,17 @@ var notifyData =
 var verify = require('../lib/alipay_notify.class');
 var config = require('../llpay.config');
 var v = new verify.AlipayNotify(config.Config);
-v.verifyReturn(returnData, function(err, result) {
-	console.log("verifyReturn result:",err, result);
-	// body...
-});
-v.verifyNotify(notifyData, function(err, result) {
-	console.log("verifyNotify result:",err, result);
-	// body...
+describe('verify', function(){
+	it('verify return data', function(done){
+		v.verifyReturn(returnData, function(err, result) {			
+			result.should.be.equal(true);
+			done(err);		
+		});
+	});
+	it('verify notify data', function(done){
+		v.verifyNotify(notifyData, function(err, result) {			
+			result.should.be.equal(true);
+			done(err);		
+		});
+	});
 });
