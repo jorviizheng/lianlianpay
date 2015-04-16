@@ -34,7 +34,7 @@ var notifyData =
 
 var verify = require('../lib/alipay_notify.class');
 var config = require('../llpay.config');
-var v = new verify.AlipayNotify(config.Config);
+var v = new verify.LLPay(config.Config);
 describe('verify', function(){
 	it('verify return data', function(done){
 		v.verifyReturn(returnData, function(err, result) {			
