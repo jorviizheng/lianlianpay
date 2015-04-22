@@ -17,7 +17,8 @@ var notifyData =
 var EventEmitter = require('events').EventEmitter;
 var verify = require('../lib/alipay_notify.class');
 var config = require('../llpay.config');
-var v = new verify.LLPay(config.Config);
+console.log("config:",config);
+var v = new verify.LLPay(config);
 describe('verify', function(){	
 	it('verify notify data event', function(done){
 		

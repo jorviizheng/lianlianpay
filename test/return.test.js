@@ -36,15 +36,17 @@ var verify = require('../lib/alipay_notify.class');
 var config = require('../llpay.config');
 var v = new verify.LLPay(config.Config);
 describe('verify', function(){
-	it('verify return data', function(done){
+	it('return data', function(done){
 		v.verifyReturn(returnData, function(err, result) {			
 			result.should.be.equal(true);
 			done(err);		
 		});
 	});
-	it('verify notify data', function(done){
-		v.verifyNotify(notifyData, function(err, result) {			
-			result.should.be.equal(true);
+	it('notify data', function(done){
+		v.verifyNotify(notifyData,  function(err, trade_no, payAmt, status, payment_method){			
+			trade_no.should.be.equal('2013051500001');
+			payAmt.should.be.equal(210.97);
+			status.should.be.equal(true);
 			done(err);		
 		});
 	});
