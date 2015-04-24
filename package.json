@@ -4,16 +4,16 @@
   "description": "lianlianpay for nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
-    "url": "git@koala:wdeng/lianlianpay.git"
+    "url": "https://github.com/no7dw/lianlianpay.git"
   },
   "keywords": [
     "lianlianpay"
   ],
-  "author": "wdeng@kalengo.com",
+  "author": "no7david@gmail.com",
   "license": "MIT",
   "dependencies": {
     
