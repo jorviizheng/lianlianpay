@@ -1,6 +1,6 @@
 {
   "name": "lianlianpay",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "lianlianpay for nodejs",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "no7david@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "wapllpay":"^0.0.2"
+    "wapllpay":"0.0.5"
   }, 
   "devDependencies": {
     "mocha": "*",
